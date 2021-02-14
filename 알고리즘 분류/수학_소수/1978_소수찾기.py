@@ -8,9 +8,11 @@ def make_primes():
     for i in range(2,len(is_prime)):
         if is_prime[i] == True:
             primes.append(i)
-            for j in range(i+1,len(is_prime)):
-                if is_prime[j] == True and j%i==0:
-                    is_prime[j] = False
+            # for j in range(i+1,len(is_prime)):
+            #     if is_prime[j] == True and j%i==0:
+            #         is_prime[j] = False
+            for j in range(i + i, len(is_prime), i):
+                is_prime[j] = False
     return primes
 
 
