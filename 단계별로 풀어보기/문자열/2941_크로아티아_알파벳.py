@@ -12,22 +12,14 @@ while i < len(s):
             if tmp == "dz=":
                 cnt += 1
                 i += 3
-            else:
-                tmp = s[i:i + 2]
-                if tmp in croatia:
-                    cnt += 1
-                    i += 2
-                else:
-                    cnt += 1
-                    i += 1
+                continue
+        tmp = s[i:i+2]
+        if tmp in croatia:
+            cnt += 1
+            i += 2
         else:
-            tmp = s[i:i+2]
-            if tmp in croatia:
-                cnt += 1
-                i += 2
-            else:
-                cnt += 1
-                i += 1
+            cnt += 1
+            i += 1
     else:
         cnt += 1
         i += 1
