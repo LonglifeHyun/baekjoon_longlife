@@ -50,7 +50,7 @@ n, m = map(int, sys.stdin.readline().rstrip().split())
 trees = [int(i) for i in sys.stdin.readline().rstrip().split()]
 high, low = max(trees), 0
 
-answers = [[-1,-1],[0,0]]
+answers = [[-1,-1],[0,0]]                       # answers[0] : under bound, answers[1] : upper bound
 is_answer = False
 find_h(trees,high,low,m,answers,is_answer)
 
