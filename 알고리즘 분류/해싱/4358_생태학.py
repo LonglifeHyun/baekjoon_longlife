@@ -18,7 +18,7 @@ tr_name.sort()
 
 # for tr in tr_name:
 #     print(tr + ' ' + str(round((tr_num[tr] * 100) / total, 4)) + '\n', end='')
-#     이거 틀린 이유를 모르겠다. 문제 이상한 듯.
+#     이거 틀린 이유를 모르겠다. 문제 이상한 듯. -> round는 지정해놓은 소수점 자리값이 0이면 출력안함. 
 # print('--------------------')
 for tr in tr_name:
     print(tr, '%.5f' % (tr_num[tr] / total * 100))
