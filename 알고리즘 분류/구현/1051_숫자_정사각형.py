@@ -40,11 +40,15 @@ for i in range(len(idxs)):
             if max_side != 0 and side <= max_side:
                 continue
             elif i+side <= len(idxs)-1:
-                for l in range(len(idxs[i+side])):
-                    if idxs[i][j][0] == idxs[i+side][l][0]:
-                        idx_set = set(idxs[i+side][l][1])
-                        if pair[0] in idx_set and pair[1] in idx_set:
-                            max_side = side
+#                 for l in range(len(idxs[i+side])):
+#                     if idxs[i][j][0] == idxs[i+side][l][0]:
+#                         idx_set = set(idxs[i+side][l][1])
+#                         if pair[0] in idx_set and pair[1] in idx_set:
+#                             max_side = side
+#                   이거 너무 복잡. 그냥 해당하는 열을 지정해서 값이 맞는지 확인만 해도 됨. 밑에.
+                if rect[i+side][pair[0]] == idxs[i][j][0] and rect[i+side][pair[1]] == idxs[i][j][0]:
+                    max_side = side
+
     if len(idxs) - i <= max_side:
         break
 
