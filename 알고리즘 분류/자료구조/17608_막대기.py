@@ -1,6 +1,6 @@
 import sys
 from collections import deque
-input = sys.stdin.readline
+input = sys.stdin.readline          # 이거 안하면 시간 초과
 
 n = int(input())
 
